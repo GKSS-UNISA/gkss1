@@ -2,8 +2,7 @@
 
 ---
 
-This project is built in reactjs, using Feature based structure.
-
+This project is built in React, using feature-based structure.
 example of the structure:
 
 ### Project Structure
