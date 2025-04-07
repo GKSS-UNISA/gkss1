@@ -1,10 +1,4 @@
-# website
-The official website to GKSS UNISA's website
-
-
----
-
-Project git Structure:
+# GKSS UNISA Website.
 
 ### Project Git Structure
 ```
