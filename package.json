@@ -6,8 +6,9 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "turbo dev",
     "format": "prettier --write **/*.{js,jsx,md,css,html}",
-    "build": "turbo run build"
+    "build": "turbo build"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
