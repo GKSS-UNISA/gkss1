@@ -15,7 +15,7 @@ A monorepo (monolithic repository) is a version control repository that contains
 ```
 gkss1/
 ├── apps/                  # Contains all applications
-│   ├── site/              # Main website (HTML/CSS/JS)
+│   ├── site/              # Main website (Vite + HTML/CSS/JS)
 │   └── react-site/        # React-based website
 ├── packages/              # Shared packages and utilities
 ├── package.json           # Root package.json for workspace management
@@ -120,7 +120,7 @@ cd gkss1
 npm install
 ```
 
-3. Start development:
+4. Start development:
 
 > This command will run all apps' development servers and might make your machine slower. Rather navigation to the app your want to work on and run this command.
 
@@ -132,7 +132,7 @@ npm run dev
 
 ### Frontend Development
 
-- Main website: [apps/site/](./apps/site/)
+- Main website: [apps/site/](./apps/site/) - Built with Vite, HTML, CSS, and JavaScript
 - React website: [apps/react-site/](./apps/react-site/)
 
 ### Shared Packages
