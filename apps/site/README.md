@@ -8,15 +8,18 @@ This is the official website for the Geekulcha Student Society (GKSS) at UNISA. 
 
 - Modern and responsive design
 - Interactive user interface
-- Event announcements.
+- Event announcements
 - Community engagement tools
+- SEO optimized with meta tags
+- Mobile-first approach
 
 ## Tech Stack 💻
 
 - HTML5
 - CSS3
 - Vanilla JavaScript
-- Live Server for development
+- Vite for development and building
+- Modern CSS reset and best practices
 
 ## Getting Started on development 🛠️
 
@@ -32,7 +35,28 @@ To start the development server:
 npm run dev
 ```
 
-This will launch the development server with live reload enabled. Just like the VS Code Live Server extention does.
+This will launch the Vite development server on port 3001 with hot module replacement (HMR) enabled.
+
+### Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+The built files will be available in the `dist` directory.
+
+## Project Structure 📁
+
+```
+src/
+├── index.html      # Main HTML file
+├── styles/         # CSS styles
+│   └── main.css    # Main stylesheet
+└── js/            # JavaScript files
+    └── index.js   # Main JavaScript file
+```
 
 ## Contributing 🤝
 
