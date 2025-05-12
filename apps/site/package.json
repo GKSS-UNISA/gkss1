@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "node serve.mjs",
-    "build": "echo 'No build script here'"
+    "dev": "vite dev",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
   }
 }
