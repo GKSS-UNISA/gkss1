@@ -132,8 +132,8 @@ npm run dev
 
 ### Frontend Development
 
-- Main website: [apps/site/README.md](apps/site/README.md)
-- React website: [apps/react-site/README.md](apps/react-site/README.md)
+- Main website: [apps/site/README.md](./apps/site/)
+- React website: [apps/react-site/README.md](./apps/react-site/)
 
 ### Shared Packages
 
