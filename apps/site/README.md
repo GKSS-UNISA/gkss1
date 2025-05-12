@@ -20,11 +20,6 @@ This is the official website for the Geekulcha Student Society (GKSS) at UNISA. 
 
 ## Getting Started on development 🛠️
 
-### Prerequisites
-
-- Node.js (Latest LTS version recommended)
-- npm (Comes with Node.js)
-
 ### Installation
 
 Have a look at the [root README](../../README.md) for all development prerequisites and guides on how to install them.
