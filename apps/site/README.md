@@ -40,11 +40,7 @@ We welcome contributions from the community! Please read our [contributing guide
 
 ## Contact 📧
 
-For any queries or support, please reach out to [Lebogang Phoshoko](mailto:dev.phoshoko.ml@gmail.com).
-
-## License 📄
-
-This project is licensed under the MIT License - see the [LICENSE](../../LICENSE) file for details.
+For any queries or support, please create issues for them and someone will attend to you ❤️.
 
 ---
 
