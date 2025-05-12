@@ -5,8 +5,5 @@
   "scripts": {
     "dev": "node serve.mjs",
     "build": "echo 'No build script here'"
-  },
-  "devDependencies": {
-    "live-server": "^1.2.2"
   }
 }
