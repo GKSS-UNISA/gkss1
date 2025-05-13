@@ -15,29 +15,31 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
+      # - uses: actions/checkout@v4
+      #   with:
+      #     fetch-depth: 1
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          cache: "npm"
+      # - name: Install Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 20
+      #     cache: "npm"
 
-      - name: Install Dependencies
-        run: |
-          npm install --global turbo@2.5
-          npm ci
+      # - name: Install Dependencies
+      #   run: |
+      #     npm install --global turbo@2.5
+      #     npm ci
 
-      - name: Build
-        run: turbo build
+      # - name: Build
+      #   run: turbo build
 
-      - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: "--preview"
-          working-directory: ./apps/site
+      - run: echo "Wait on setting up preview deployments for now"
+
+      # - name: Deploy to Vercel
+      #   uses: amondnet/vercel-action@v25
+      #   with:
+      #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      #     vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+      #     vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+      #     vercel-args: "--preview"
+      #     working-directory: ./apps/site
