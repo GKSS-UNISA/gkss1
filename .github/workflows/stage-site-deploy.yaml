@@ -1,11 +1,12 @@
 name: Staging Deployment For Site
 
 on:
-  push:
-    paths:
-      - "apps/site/**"
-    branches:
-      - develop
+  workflow_dispatch:
+  # push:
+  #   paths:
+  #     - "apps/site/**"
+  #   branches:
+  #     - develop
 
 permissions:
   contents: read
