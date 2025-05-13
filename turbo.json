@@ -1,0 +1,26 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "globalDependencies": ["tsconfig.json"],
+  "tasks": {
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": [
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "src/**/*.css",
+        "src/**/*.scss",
+        "package.json",
+        "tsconfig.json",
+        "next.config.js",
+        "public/**/*",
+        ".env"
+      ],
+      "outputs": [".next/**/*", "dist/**/*", "out/**/*"]
+    }
+  }
+}

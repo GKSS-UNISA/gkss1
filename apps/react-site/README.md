@@ -6,6 +6,7 @@ This project is built in React with Vite, using feature-based structure.
 example of the structure:
 
 ### Project Structure
+
 ```
 my-app/
 ├── public/               # Static assets (copied as-is)
@@ -50,7 +51,8 @@ my-app/
 ```
 
 ### Feature Structure
-``` 
+
+```
 features/
 └── auth/
     ├── components/     # Auth-specific components
