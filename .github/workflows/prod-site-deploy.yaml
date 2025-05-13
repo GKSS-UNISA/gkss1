@@ -3,11 +3,12 @@
 name: Vercel Deployment For Site
 
 on:
-  push:
-    paths:
-      - "apps/site/**"
-    branches:
-      - main
+  workflow_dispatch:
+  # push:
+  #   paths:
+  #     - "apps/site/**"
+  #   branches:
+  #     - main
 
 permissions:
   contents: read
