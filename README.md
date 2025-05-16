@@ -94,16 +94,12 @@ Installation:
 Verify Git installation:
 
 ```bash
-# Linux & macOS
-git --version
-
-# Windows
 git --version
 ```
 
 ## Getting Started 🚀
 
-1. First create your fork of the [gkss1 repo](https://github.com/GKSS-UNISA/gkss1).
+1. First [click here](https://github.com/GKSS-UNISA/gkss1/fork) to create your fork of the gkss1 repo.
 
 2. Clone the repository:
 
@@ -132,10 +128,15 @@ npm run dev
 
 - Main website: [apps/site/](./apps/site/) - Built with Vite, HTML, CSS, and JavaScript
 - React website: [apps/react-site/](./apps/react-site/)
+- CMS (Content Management System) [apps/cms/](./apps/cms/)
 
 ### Shared Packages
 
-- Check the [packages/](packages/) directory for shared utilities and components
+The `packages/` directory contains shared code used across multiple apps:
+
+- `@repo/typescript-config` - Common TypeScript settings
+
+Each package has its own documentation and can be imported into any app in the monorepo.
 
 ## Development Guidelines 📝
 
@@ -158,8 +159,7 @@ Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting pul
 For any questions or issues:
 
 1. Check the documentation in each app's README
-2. Create an issue in the repository
-3. Reach out to the maintainers
+2. Reach out in the [discussions](https://github.com/GKSS-UNISA/gkss1/discussions)
 
 ---
 
