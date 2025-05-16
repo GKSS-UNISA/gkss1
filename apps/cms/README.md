@@ -34,7 +34,9 @@ This CMS app allows you to manage users, media, and other content for the GKSS1 
 ### Prerequisites
 
 - Node.js 18+ and npm
-- A PostgreSQL database
+- A running PostgreSQL database
+
+> For our database hosting, we'll use [neon.tech](https://neon.tech/), a PostgreSQL provider. It offers a scalable database solution that'll handle all our data storage and serving needs in production.
 
 ### Installation
 
@@ -59,7 +61,7 @@ This CMS app allows you to manage users, media, and other content for the GKSS1 
 
 4. Access the CMS at `http://localhost:8080/admin`
 
-> make sure you navigate straight to `/admin` a 404 Not Found page will be displayed for all other routes. All except `/api` since the REST API is expose at that route.
+> Make sure you navigate straight to `/admin`. A 404 (Not Found) page will be displayed for all other routes. All except `/api` and `/graphql` since the REST API and GraphQL endpoints are exposed at that route.
 
 ## Project Structure 📁
 
@@ -68,6 +70,7 @@ apps/cms/
 ├── src/                  # Source code
 │   ├── app/              # Next.js app directory
 │   │   └── admin/        # Admin panel routes
+│   │   └── api/          # API routes
 │   ├── collections/      # Payload collections (Users, Media, etc.)
 │   ├── styles/           # CSS styles
 │   └── payload.config.ts # Payload CMS configuration
@@ -80,19 +83,19 @@ apps/cms/
 Create a `.env.local` file in the `apps/cms` directory with the following variables:
 
 ```
-DATABASE_URI=postgres://<username>:<password>@localhost:5432/<databasename>
+DATABASE_URI=postgres://<username>:<password>@localhost:5432/<databasename> # Will be provided
 PAYLOAD_SECRET=<your-secure-secret-key>
 ```
 
 - `DATABASE_URI`: Connection string for your **running** PostgreSQL database
 - `PAYLOAD_SECRET`: A secure random string used for encrypting sensitive information
 
-  > You can generate one using this command:
+  > You can generate a `PAYLOAD_SECRET` using this command:
 
   ```bash
   # On windows, use the git bash terminal and not the normal CMD or Powershell
 
-  openssl rand -base64 20 # Copy the random value that's printed and paste it in the `.env` file
+  openssl rand -base64 20 # Copy the random value that's printed and paste it in the `.env` file as a the value for the `PAYLOAD_SECRET`
   ```
 
 ## Documentation 📚
@@ -103,8 +106,7 @@ PAYLOAD_SECRET=<your-secure-secret-key>
 
 ### Internal Documentation
 
-- For project-specific documentation, check the `docs/` directory in the monorepo root
-- API endpoints are automatically documented at `/admin/api-docs` when running the CMS
+- For project-specific documentation, check the [`docs/`](../../docs/) directory in the monorepo root
 
 ## Common Tasks 🛠️
 
@@ -147,9 +149,7 @@ npm run generate:types
 
 If you encounter any issues that aren't covered here:
 
-1. Check the existing issues in the GitHub repository
-2. Ask in the Help category in discussions
-3. Create a new issue with detailed information about your problem
+- Ask in the Help category in [discussions](https://github.com/GKSS-UNISA/gkss1/discussions)
 
 ---
 
