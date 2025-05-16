@@ -15,8 +15,6 @@ A monorepo (monolithic repository) is a version control repository that contains
 ```
 gkss1/
 ├── apps/                  # Contains all applications
-│   ├── site/              # Main website (Vite + HTML/CSS/JS)
-│   └── react-site/        # React-based website
 ├── packages/              # Shared packages and utilities
 ├── package.json           # Root package.json for workspace management
 └── turbo.json             # Turborepo configuration
