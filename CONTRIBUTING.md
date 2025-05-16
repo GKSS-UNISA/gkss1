@@ -23,7 +23,7 @@ Now, you need to download your fork to your computer:
 5. Type:
 
 ```bash
-git clone <The URL you copied here>
+git clone https://github.com/<your-github-username>/gkss1.git
 ```
 
 6. Press Enter
@@ -32,7 +32,7 @@ git clone <The URL you copied here>
 
 Before you start coding:
 
-1. Read through our [`main README.md`](./README.md) file carefully
+1. Read through our main [`README.md`](./README.md) file carefully
 2. Install all the required software and tools mentioned there
 3. Make sure everything is working on your computer
 
@@ -60,10 +60,10 @@ When you're done:
 2. Type: `git commit -m "Description of your changes"` to save them
 3. Type: `git push origin feature/your-feature-name` to upload to GitHub in the new branch named `feature/your-feature-name`
 
-### 7. Merge to Your Fork's Main Branch 🔄
+### 7. Merge into GKSS-UNISA Develop Branch 🔄
 
 1. Go to your fork on GitHub
-2. Create a Pull Request to merge your feature branch into your fork's main branch
+2. Create a Pull Request to merge your feature branch into GKSS-UNISA develop branch
 3. Wait for any automated tests to complete
 
 ### 8. Create a Pull Request to the Main Project 🎉
@@ -83,8 +83,7 @@ If you get stuck anywhere or have questions:
 
 > **DON'T HESITATE TO ASK...THIS IS HOW WE ALL LEARNT!!!**
 
-1. Ask in our community chat (The WhatsApp group) or email [click here to email 0xLEBOGANG](mailto:dev.phoshoko.ml@gmail.com)
-2. OR you can open an issue on GitHub and someone will attend to you.
+1. Ask in this project's [discussions](https://github.com/GKSS-UNISA/gkss1/discussions)
 
 Remember: Every contribution, no matter how small, makes a difference!
 
