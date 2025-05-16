@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 import path from "path";
 import sharp from "sharp";
 
-import { Users, Media } from "./collections";
+import { Users, Media } from "@/collections";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
