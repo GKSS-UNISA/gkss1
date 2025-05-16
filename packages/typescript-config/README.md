@@ -4,11 +4,24 @@ This package contains all the TypeScript configuration files used throughout the
 
 ## 🚀 Usage
 
-To use one of the configurations in your package, reference it in your `tsconfig.json`:
+To use one of the configurations in your package:
+
+1. Include this package in the package.json file of the app/package you are working with.
 
 ```json
 {
-  "extends": "@repo/typescript-config/base.json"
+  "@repo/typescript-config": "*"
+}
+```
+
+2. reference your desired config in app/package's `tsconfig.json`
+
+```json
+{
+  "extends": "@repo/typescript-config/<desired-config>.json",
+  "compilerOptions": {
+    // Configs special to that app/package
+  }
 }
 ```
 
