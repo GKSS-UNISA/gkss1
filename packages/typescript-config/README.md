@@ -6,11 +6,14 @@ This package contains all the TypeScript configuration files used throughout the
 
 To use one of the configurations in your package:
 
-1. Include this package in the package.json file of the app/package you are working with.
+1. Include this package in the package.json `devDependencies` sections of the app or package you are working with.
 
 ```json
 {
-  "@repo/typescript-config": "*"
+  "devDependencies": {
+    "@repo/typescript-config": "*"
+    /* Other deps */
+  }
 }
 ```
 
@@ -20,7 +23,7 @@ To use one of the configurations in your package:
 {
   "extends": "@repo/typescript-config/<desired-config>.json",
   "compilerOptions": {
-    // Configs special to that app/package
+    /* Configs special to that app/package */
   }
 }
 ```
