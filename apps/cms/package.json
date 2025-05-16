@@ -26,13 +26,15 @@
     "sharp": "^0.34.1"
   },
   "devDependencies": {
-    "@repo/typescript-config": "*",
-    "@repo/eslint-config": "*",
     "@eslint/eslintrc": "^3.3.1",
-    "eslint-config-next": "^15.3.2",
-    "typescript-eslint": "^8.32.1",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
     "@types/node": "^22.15.18",
     "@types/react": "^19.1.4",
-    "@types/react-dom": "^19.1.5"
+    "@types/react-dom": "^19.1.5",
+    "eslint-config-next": "^15.3.2",
+    "sass": "^1.89.0",
+    "sass-loader": "^16.0.5",
+    "typescript-eslint": "^8.32.1"
   }
 }
