@@ -30,6 +30,7 @@
     "@repo/eslint-config": "*",
     "@eslint/eslintrc": "^3.3.1",
     "eslint-config-next": "^15.3.2",
+    "typescript-eslint": "^8.32.1",
     "@types/node": "^22.15.18",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5"

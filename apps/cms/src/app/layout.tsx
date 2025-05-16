@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+
 import config from "@payload-config";
 import "@payloadcms/next/css";
 import type { ServerFunctionClient } from "payload";
@@ -11,6 +13,7 @@ type Args = {
   children: React.ReactNode;
 };
 
+// eslint-disable-next-line @typescript-eslint/require-await
 const serverFunction: ServerFunctionClient = async function (args) {
   "use server";
   return handleServerFunctions({
