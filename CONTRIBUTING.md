@@ -33,8 +33,10 @@ git clone <The URL you copied here>
 Before you start coding:
 
 1. Read through our [`main README.md`](./README.md) file carefully
-2. Install all the required software and tools mentioned there
-3. Make sure everything is working on your computer
+2. Make sure you have [pnpm](https://pnpm.io/) installed (we use pnpm for package management)
+3. Install project dependencies by running `pnpm install` in the project folder
+4. Install all other required software and tools mentioned in the README
+5. Make sure everything is working on your computer
 
 ## Making Changes ✨
 
