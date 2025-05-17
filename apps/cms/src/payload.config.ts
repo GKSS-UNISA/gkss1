@@ -1,3 +1,4 @@
+import { uploadthingStorage } from "@payloadcms/storage-uploadthing";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
@@ -32,6 +33,14 @@ export default buildConfig({
   // database-adapter-config-end
   sharp,
   plugins: [
-    // storage-adapter-placeholder
+    uploadthingStorage({
+      clientUploads: true,
+      collections: {
+        media: true,
+      },
+      options: {
+        token: process.env.UPLOADTHING_TOKEN,
+      },
+    }),
   ],
 });
