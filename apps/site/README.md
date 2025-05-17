@@ -32,7 +32,7 @@ Have a look at the [root README](../../README.md) for all development prerequisi
 To start the development server:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 This will launch the Vite development server on port 3001 with hot module replacement (HMR) enabled.
@@ -42,7 +42,7 @@ This will launch the Vite development server on port 3001 with hot module replac
 To create a production build:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 The built files will be available in the `dist` directory.

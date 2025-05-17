@@ -26,26 +26,41 @@ gkss1/
 
 Before you start development, ensure you have the following software installed:
 
-### Node.js and npm
+### Node.js and pnpm
 
 - Node.js 18.x or later
-- npm 9.x or later
+- pnpm 10.9.0 or later
 
-To install Node.js and npm:
+To install Node.js and pnpm:
 
 1. Visit [Node.js official website](https://nodejs.org/)
 2. Download and install the LTS version
-3. Verify installation:
+3. Install pnpm globally:
+
+```bash
+corepack enable pnpm
+
+# If the above does not work,
+
+npm install --global pnpm@10.9.0
+```
+
+```bash
+corepack prepare pnpm@10.9.0
+```
+
+4. Verify installation:
 
 ```bash
 node --version
-npm --version
+
+pnpm --version
 ```
 
 ##### Turborepo (Build tool)
 
 ```bash
-npm install -g turbo@2.5
+npm install --global turbo@2.5
 ```
 
 ### Python 3.10+
@@ -58,6 +73,9 @@ Required for various development tools and scripts.
 
 ```bash
 sudo apt update
+```
+
+```bash
 sudo apt install python
 ```
 
@@ -66,6 +84,8 @@ sudo apt install python
 ```bash
 brew install python
 ```
+
+> Ask for help in the [discussions](https://github.com/GKSS-UNISA/gkss1/discussions) to get help with configuring your Mac to work with `brew`
 
 #### Windows:
 
@@ -78,7 +98,9 @@ Verify Python installation:
 ```bash
 # Linux & macOS
 python3 --version
+```
 
+```bash
 # Windows
 python --version
 ```
@@ -96,10 +118,6 @@ Installation:
 Verify Git installation:
 
 ```bash
-# Linux & macOS
-git --version
-
-# Windows
 git --version
 ```
 
@@ -111,13 +129,16 @@ git --version
 
 ```bash
 git clone https://github.com/<your-github-username>/gkss1.git
+```
+
+```bash
 cd gkss1
 ```
 
 3. Install dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 4. Start development:
@@ -125,7 +146,7 @@ npm install
 > This command will run all apps' development servers and might make your machine slower. Rather navigation to the app your want to work on and run this command.
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ## Where to? 🧭
