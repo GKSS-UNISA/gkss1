@@ -17,7 +17,8 @@
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^22.15.18",
     "@types/react": "^19.1.4",
-    "@types/react-dom": "^19.1.5"
+    "@types/react-dom": "^19.1.5",
+    "drizzle-kit": "^0.31.1"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3.38.0",

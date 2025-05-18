@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 import path from "path";
 import sharp from "sharp";
 
-import { Users, Media } from "@/collections";
+import { Users, Media, Pages } from "@/collections";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -17,7 +17,7 @@ export default buildConfig({
       importMapFile: path.resolve(dirname, "app", "admin", "importMap.js"),
     },
   },
-  collections: [Users, Media],
+  collections: [Users, Media, Pages],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET as string,
   typescript: {
