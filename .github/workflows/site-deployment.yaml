@@ -1,0 +1,37 @@
+# This workflow is triggered on pushes to the 'apps/site' directory.
+
+name: Vercel Deployment For Site
+
+on:
+  workflow_dispatch:
+  # push:
+  #   paths:
+  #     - "apps/site/**"
+  #   branches:
+  #     - main
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup environment
+        uses: ./.github/workflows/actions/setup.yaml
+
+      - name: Build
+        run: turbo run build --affected
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: "--prod"
+          working-directory: ./apps/site/dist
