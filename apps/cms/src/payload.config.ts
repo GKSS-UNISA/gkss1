@@ -14,6 +14,11 @@ const dirname = path.dirname(filename);
 
 export default buildConfig({
   admin: {
+    meta: {
+      title: "GKSS UNISA | Admin Panel",
+      description: "GKSS UNISA Admin panel for managing the website content.",
+      icons: [],
+    },
     user: Users.slug,
     importMap: {
       importMapFile: path.resolve(dirname, "app", "admin", "importMap.js"),

@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap");
+
+:root {
+  --base-px: 20;
+  --base-body-size: 13;
+  --base: calc((var(--base-px) / var(--base-body-size)) * 1rem);
+
+  --font-body: "Geist";
+  --font-serif: "Geist";
+  --font-mono: "Geist Mono", Menlo, Consolas, Monaco, monospace;
+}
