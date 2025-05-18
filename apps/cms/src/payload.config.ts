@@ -12,8 +12,6 @@ import { Users, Media, Pages } from "@/collections";
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
-console.log(process.env.NODE_ENV);
-
 export default buildConfig({
   admin: {
     user: Users.slug,

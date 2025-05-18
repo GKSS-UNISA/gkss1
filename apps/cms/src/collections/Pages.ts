@@ -12,11 +12,5 @@ export const Pages: CollectionConfig = {
       type: "text",
       required: true,
     },
-    {
-      name: "layouts",
-      label: "Layouts",
-      type: "blocks",
-      blocks: [],
-    },
   ],
 };
