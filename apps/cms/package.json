@@ -24,6 +24,7 @@
     "@payloadcms/db-postgres": "^3.38.0",
     "@payloadcms/next": "^3.38.0",
     "@payloadcms/richtext-lexical": "^3.38.0",
+    "@payloadcms/storage-uploadthing": "^3.38.0",
     "cross-env": "^7.0.3",
     "graphql": "^16.11.0",
     "next": "^15.3.2",

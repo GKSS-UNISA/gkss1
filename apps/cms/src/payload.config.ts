@@ -1,5 +1,6 @@
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
+import {uploadthingStorage} from '@payloadcms/storage-uploadthing'
 import { buildConfig } from "payload";
 import { fileURLToPath } from "url";
 import path from "path";
@@ -29,5 +30,15 @@ export default buildConfig({
     },
   }),
   sharp,
-  plugins: [],
+  plugins: [
+    uploadthingStorage({
+      collections: {
+        media: true
+      },
+      options: {
+        token: process.env.UPLOADTHING_TOKEN,
+        acl: "public-read"
+      }
+    })
+  ],
 });
