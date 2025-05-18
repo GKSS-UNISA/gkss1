@@ -1,6 +1,7 @@
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { uploadthingStorage } from "@payloadcms/storage-uploadthing";
+import { seoPlugin } from "@payloadcms/plugin-seo";
 import { buildConfig } from "payload";
 import { fileURLToPath } from "url";
 import path from "path";
@@ -48,5 +49,12 @@ export default buildConfig({
           }),
         ]
       : []),
+    seoPlugin({
+      tabbedUI: true,
+      collections: ["pages"],
+      uploadsCollection: "media",
+      generateTitle: ({ doc }) => `GKSS UNISA | ${doc.title}`,
+      generateDescription: ({ doc }) => doc.excerpt,
+    }),
   ],
 });
