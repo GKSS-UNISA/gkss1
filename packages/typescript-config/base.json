@@ -17,9 +17,6 @@
     "incremental": true,
     "composite": true,
     "declaration": true,
-    "sourceMap": true,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "sourceMap": true
   }
 }
