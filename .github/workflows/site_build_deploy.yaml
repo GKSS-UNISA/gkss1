@@ -2,8 +2,7 @@
 name: Vercel Deployment For Site
 
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
       - main
     paths:
@@ -15,7 +14,10 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'develop'
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_CACHE_TOKEN }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+
     steps:
       - uses: actions/checkout@v4
         with:
