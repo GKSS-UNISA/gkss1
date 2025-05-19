@@ -1,6 +1,5 @@
 # This workflow is triggered when a pull request from develop branch is merged to main.
-
-name: Vercel Deployment For Site
+name: Vercel Deployment For CMS
 
 on:
   pull_request:
@@ -8,7 +7,7 @@ on:
     branches:
       - main
     paths:
-      - "apps/site/**"
+      - "apps/cms/**"
 
 permissions:
   contents: read
@@ -16,7 +15,6 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'develop'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,8 +35,14 @@ jobs:
       - name: Install Turbo Globally
         run: pnpm add --global turbo@2.5
 
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
       - name: Run Build Task
-        run: turbo build --filter=site
+        run: turbo build --filter=cms
+
+      - name: Run Migrations
+        run: pnpm --filter=cms migrate
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
@@ -46,5 +50,4 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: "--prod"
-          working-directory: ./apps/site/dist
+          working-directory: ./apps/cms
