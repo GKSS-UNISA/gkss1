@@ -42,6 +42,12 @@ jobs:
       - name: Run Build Task
         run: turbo build --filter=site
 
+      # Activate in local job
+      - name: Install Git
+        run: |
+          apt update
+          apt install -y git
+
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
         with:
