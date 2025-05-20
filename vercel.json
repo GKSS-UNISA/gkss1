@@ -1,3 +1,0 @@
-{
-  "builds": [{ "src": "apps/site/dist", "use": "@vercel/static" }]
-}
