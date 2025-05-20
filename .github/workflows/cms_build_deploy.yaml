@@ -2,9 +2,10 @@
 name: Vercel Deployment For CMS
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main
 
 permissions:
   contents: read
@@ -48,10 +49,16 @@ jobs:
           PAYLOAD_SECRET: ${{ secrets.PAYLOAD_SECRET }}
           DATABASE_URI: ${{ secrets.DATABASE_URI }}
 
+      # Activate in local job
+      # - name: Install Git
+      #   run: |
+      #     apt update
+      #     apt install -y git
+
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_CMS_PROJECT_ID }}
-          working-directory: ./apps/cms/.next
+          working-directory: ./apps/cms/dist
