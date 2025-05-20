@@ -2,9 +2,10 @@
 name: Vercel Deployment For Site
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main
 
 permissions:
   contents: read
@@ -43,10 +44,10 @@ jobs:
         run: turbo build --filter=site
 
       # Activate in local job
-      - name: Install Git
-        run: |
-          apt update
-          apt install -y git
+      # - name: Install Git
+      #   run: |
+      #     apt update
+      #     apt install -y git
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
