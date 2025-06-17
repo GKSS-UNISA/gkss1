@@ -19,9 +19,14 @@ nav,
 section {
   display: block;
 }
-
-/* Reset body */
+html {
+    /* To make use of full height of page*/
+    min-height: 100%;
+    margin: 0;
+}
 body {
+    min-height: 100%;
+    margin: 0;
   line-height: 1;
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
@@ -134,4 +139,18 @@ html {
 
 .construction__link:hover {
   color: #004499;
+}
+
+
+.home {
+  /* The image used */
+  background-image: url("../assets/unisaHome.jpg");
+
+  /* Full height */
+  min-height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
